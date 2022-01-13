@@ -8,6 +8,9 @@ export const themeSlice = createSlice({
   reducers: {
     changeColour: (state, action) => {
       state.value = action.payload
+      if (state.value !== typeof 'string') {
+        console.log("not a valid colour")
+      }
     }
   }
 })
