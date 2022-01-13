@@ -1,13 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { changeColour } from "../features/theme";
 
 const ChangeColour = () => {
   const [colour, setColour] = useState("");
+  const dispatch = useDispatch();
   return (
     <div>
       <input type="text" onChange={(event) => {setColour(event.target.value)}} />
-      <button>Change Colour</button>
+      <button onClick={() => dispatch(changeColour(colour))}>Change Text Colour</button>
     </div>
   )
 }
 
-export default ChangeColour
+export default ChangeColour;
