@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSelector } from 'react-redux' // used or accessing state
+import { useSelector } from 'react-redux' // used for accessing state
 
 const Profile = () => {
   const user = useSelector((state) => state.user.value)
