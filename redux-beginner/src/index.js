@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
+import userReducer from './features/user';
 
 const store = configureStore({
- reducer = {}
+ reducer: {
+   user: userReducer
+ }
 })
-
 
 ReactDOM.render(
   <React.StrictMode>
