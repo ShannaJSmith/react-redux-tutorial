@@ -1,11 +1,12 @@
 import React from 'react'
 
-function Login() {
+const Login = () => {
   return (
     <div>
-      
+      <button>Login</button>
     </div>
   )
 }
 
 export default Login
+
